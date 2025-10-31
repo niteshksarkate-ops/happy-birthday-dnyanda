@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -766,4 +767,1484 @@
     height: 90px;
     border-radius: 50%;
     background: 
-      radial-gradient(circle at 35% 35%, #ffffff
+      radial-gradient(circle at 35% 35%, #ffffff 0%, transparent 50%),
+      conic-gradient(from 0deg, 
+        var(--blue) 0deg 30deg,
+        var(--teal) 30deg 60deg,
+        var(--pink) 60deg 90deg,
+        var(--purple) 90deg 120deg,
+        var(--gold) 120deg 150deg,
+        var(--blue) 150deg 180deg,
+        var(--teal) 180deg 210deg,
+        var(--pink) 210deg 240deg,
+        var(--purple) 240deg 270deg,
+        var(--gold) 270deg 300deg,
+        var(--blue) 300deg 330deg,
+        var(--teal) 330deg 360deg
+      );
+    box-shadow: 
+      0 0 40px rgba(125, 184, 255, 0.8),
+      0 0 80px rgba(255, 157, 209, 0.6),
+      inset -10px -10px 30px rgba(0,0,0,0.3);
+    animation: spin 8s linear infinite;
+    z-index: 10;
+  }
+
+  @keyframes spin {
+    to { transform: translateX(-50%) rotate(360deg); }
+  }
+
+  /* Light Beams from Disco Ball */
+  .light-beams {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+  }
+
+  .beam {
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    width: 100px;
+    height: 300px;
+    background: linear-gradient(180deg, 
+      transparent 0%,
+      rgba(125, 184, 255, 0.3) 20%,
+      rgba(125, 184, 255, 0.1) 60%,
+      transparent 100%);
+    transform-origin: 50% 0%;
+    animation: beamSweep 6s ease-in-out infinite;
+    opacity: 0.7;
+  }
+
+  .beam:nth-child(1) { animation-delay: 0s; }
+  .beam:nth-child(2) { animation-delay: 1s; }
+  .beam:nth-child(3) { animation-delay: 2s; }
+
+  @keyframes beamSweep {
+    0%, 100% { transform: translateX(-50%) rotate(-30deg); }
+    50% { transform: translateX(-50%) rotate(30deg); }
+  }
+
+  /* CSS Panda */
+  .panda {
+    position: relative;
+    width: 80px;
+    height: 100px;
+  }
+
+  .panda-head {
+    position: absolute;
+    width: 60px;
+    height: 55px;
+    background: #fff;
+    border-radius: 50%;
+    top: 0;
+    left: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+
+  .panda-ear {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background: #000;
+    border-radius: 50%;
+    top: -5px;
+  }
+
+  .panda-ear.left { left: 5px; }
+  .panda-ear.right { right: 5px; }
+
+  .panda-eye {
+    position: absolute;
+    width: 18px;
+    height: 22px;
+    background: #000;
+    border-radius: 50%;
+    top: 15px;
+  }
+
+  .panda-eye.left { left: 10px; }
+  .panda-eye.right { right: 10px; }
+
+  .panda-eye::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    top: 6px;
+    left: 5px;
+  }
+
+  .panda-nose {
+    position: absolute;
+    width: 12px;
+    height: 10px;
+    background: #000;
+    border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .panda-body {
+    position: absolute;
+    width: 55px;
+    height: 50px;
+    background: #fff;
+    border-radius: 40%;
+    bottom: 0;
+    left: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+
+  .panda-arm {
+    position: absolute;
+    width: 18px;
+    height: 35px;
+    background: #000;
+    border-radius: 50%;
+    bottom: 5px;
+  }
+
+  .panda-arm.left { left: 0; }
+  .panda-arm.right { right: 0; }
+
+  /* CSS Monkey */
+  .monkey {
+    position: relative;
+    width: 75px;
+    height: 100px;
+  }
+
+  .monkey-head {
+    position: absolute;
+    width: 55px;
+    height: 50px;
+    background: #d4a574;
+    border-radius: 50%;
+    top: 5px;
+    left: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+
+  .monkey-face {
+    position: absolute;
+    width: 40px;
+    height: 35px;
+    background: #f5deb3;
+    border-radius: 50%;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .monkey-ear {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #d4a574;
+    border-radius: 50%;
+    top: 8px;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.2);
+  }
+
+  .monkey-ear.left { left: 0; }
+  .monkey-ear.right { right: 0; }
+
+  .monkey-eye {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #000;
+    border-radius: 50%;
+    top: 12px;
+  }
+
+  .monkey-eye.left { left: 10px; }
+  .monkey-eye.right { right: 10px; }
+
+  .monkey-nose {
+    position: absolute;
+    width: 8px;
+    height: 6px;
+    background: #8b7355;
+    border-radius: 50%;
+    top: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .monkey-mouth {
+    position: absolute;
+    width: 15px;
+    height: 8px;
+    border: 2px solid #8b7355;
+    border-top: none;
+    border-radius: 0 0 50% 50%;
+    top: 26px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .monkey-body {
+    position: absolute;
+    width: 50px;
+    height: 45px;
+    background: #d4a574;
+    border-radius: 40%;
+    bottom: 5px;
+    left: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+
+  .monkey-arm {
+    position: absolute;
+    width: 15px;
+    height: 32px;
+    background: #d4a574;
+    border-radius: 50%;
+    bottom: 8px;
+  }
+
+  .monkey-arm.left { left: 2px; }
+  .monkey-arm.right { right: 2px; }
+
+  /* Dancers Container */
+  .dancers {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 40px;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .dancer-wrapper {
+    display: inline-block;
+  }
+
+  .dancer-wrapper.panda-dance {
+    animation: pandaDance 2.2s infinite ease-in-out;
+  }
+
+  .dancer-wrapper.monkey-dance {
+    animation: monkeyDance 2s infinite ease-in-out;
+  }
+
+  @keyframes pandaDance {
+    0% { transform: translateY(0) rotate(0) scale(1); }
+    15% { transform: translateY(-30px) rotate(-8deg) scale(1.05); }
+    30% { transform: translateY(0) rotate(4deg) scale(1); }
+    45% { transform: translateY(-25px) rotate(-6deg) scale(1.03); }
+    60% { transform: translateY(0) rotate(0) scale(1); }
+    75% { transform: translateY(-20px) rotate(8deg) scale(1.02); }
+    100% { transform: translateY(0) rotate(0) scale(1); }
+  }
+
+  @keyframes monkeyDance {
+    0% { transform: translateY(0) rotate(0) scale(1); }
+    20% { transform: translateY(-35px) rotate(12deg) scale(1.08); }
+    40% { transform: translateY(0) rotate(-8deg) scale(1); }
+    60% { transform: translateY(-28px) rotate(5deg) scale(1.04); }
+    80% { transform: translateY(0) rotate(-3deg) scale(1); }
+    100% { transform: translateY(0) rotate(0) scale(1); }
+  }
+
+  .heart {
+    font-size: 32px;
+    color: var(--pink);
+    filter: drop-shadow(0 0 10px rgba(255, 157, 209, 0.8));
+    animation: heartPulse 1.4s ease-in-out infinite;
+  }
+
+  @keyframes heartPulse {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.3); opacity: 1; }
+  }
+
+  /* Music Player */
+  .music-player {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, var(--pink), var(--purple));
+    padding: 12px 18px;
+    border-radius: 50px;
+    box-shadow: 0 6px 20px rgba(255, 157, 209, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 1000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .music-player:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 157, 209, 0.7);
+  }
+
+  .music-icon {
+    font-size: 20px;
+    color: white;
+  }
+
+  .music-text {
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  /* Enhanced Reasons Grid */
+  .reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 18px;
+    margin-top: 25px;
+  }
+
+  .reason {
+    background: linear-gradient(135deg, #f6fbff, #e1efff);
+    border-radius: 16px;
+    padding: 22px;
+    font-size: 1.05rem;
+    border: 2px solid var(--border);
+    box-shadow: 0 6px 18px rgba(125, 184, 255, 0.12);
+    transition: all 0.35s ease;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .reason::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(125, 184, 255, 0.15) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+  }
+
+  .reason:hover::before {
+    opacity: 1;
+  }
+
+  .reason:hover {
+    transform: translateY(-8px) scale(1.02);
+    background: linear-gradient(135deg, #e1efff, #d4e6ff);
+    box-shadow: 0 12px 30px rgba(125, 184, 255, 0.25);
+    border-color: var(--blue);
+  }
+
+  /* MINI-GAME: Catch the Falling Hearts */
+  .mini-game {
+    position: relative;
+    height: 450px;
+    background: linear-gradient(180deg, #e9f4ff, #d9e9ff);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid var(--border);
+  }
+
+  .game-canvas {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .score-display {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--blue-dark);
+    background: white;
+    padding: 10px 25px;
+    border-radius: 25px;
+    box-shadow: 0 4px 15px rgba(125, 184, 255, 0.3);
+    z-index: 100;
+  }
+
+  .game-heart {
+    position: absolute;
+    font-size: 28px;
+    animation: heartFall linear;
+    cursor: pointer;
+    user-select: none;
+    filter: drop-shadow(0 2px 5px rgba(255, 157, 209, 0.4));
+    transition: transform 0.1s ease;
+  }
+
+  .game-heart:hover {
+    transform: scale(1.2);
+  }
+
+  @keyframes heartFall {
+    from { top: -50px; }
+    to { top: 100%; }
+  }
+
+  .panda-catcher {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: left 0.15s ease-out;
+    cursor: pointer;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
+  }
+
+  .game-instructions {
+    text-align: center;
+    padding: 15px;
+    background: linear-gradient(135deg, var(--gold), var(--orange));
+    color: white;
+    font-weight: 600;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 15px rgba(255, 209, 102, 0.4);
+  }
+
+  .game-complete {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(135deg, var(--pink), var(--purple));
+    color: white;
+    padding: 30px 40px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    box-shadow: 0 10px 40px rgba(255, 157, 209, 0.6);
+    z-index: 200;
+    display: none;
+  }
+
+  .game-complete.show {
+    display: block;
+    animation: popIn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  @keyframes popIn {
+    0% { transform: translate(-50%, -50%) scale(0); }
+    100% { transform: translate(-50%, -50%) scale(1); }
+  }
+
+  /* Enhanced Gift Box with BOROLINE */
+  .giftWrap {
+    display: flex;
+    justify-content: center;
+  }
+
+  .giftBox {
+    width: 340px;
+    height: 240px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .giftBox .box {
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 74%;
+    background: linear-gradient(180deg, #fff, #f3f8ff);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(125, 184, 255, .2);
+  }
+
+  .giftBox .lid {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 44%;
+    background: linear-gradient(135deg, var(--pink), var(--purple));
+    border: 2px solid #d18cff;
+    border-radius: 12px;
+    transform-origin: left center;
+    transition: transform .6s cubic-bezier(.2,.8,.2,1);
+  }
+
+  .giftBox.open .lid {
+    transform: rotate(-22deg) translate(-15px,-25px);
+  }
+
+  .ribbon {
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(45deg,
+      transparent,
+      transparent 14px,
+      var(--gold) 14px,
+      var(--gold) 28px);
+  }
+
+  .inside {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 15px;
+    padding-bottom: 20px;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity .5s, transform .5s;
+  }
+
+  .giftBox.open .inside {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Three Bottles: Height, Love, BOROLINE */
+  .bottle {
+    width: 88px;
+    height: 145px;
+    position: relative;
+    border-radius: 18px 18px 12px 12px;
+    box-shadow: 0 8px 20px rgba(125, 184, 255, .25);
+    overflow: hidden;
+  }
+
+  .bottle.height {
+    background: 
+      linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.35) 0%,
+        rgba(255, 255, 255, 0.1) 25%,
+        transparent 50%,
+        rgba(0, 0, 0, 0.05) 75%,
+        rgba(0, 0, 0, 0.1) 100%
+      ),
+      repeating-linear-gradient(90deg,
+        #eaf4ff 0px,
+        #d9e9ff 2px,
+        #c4d9ff 4px,
+        #d9e9ff 6px
+      );
+    border: 1px solid #b8d4ff;
+  }
+
+  .bottle.love {
+    background: 
+      linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.4) 0%,
+        rgba(255, 255, 255, 0.1) 30%,
+        transparent 60%,
+        rgba(255, 130, 201, 0.1) 80%,
+        rgba(255, 130, 201, 0.2) 100%
+      ),
+      repeating-linear-gradient(45deg,
+        #ffeaf8 0px,
+        #ffdbf0 3px,
+        #ffc9e6 6px,
+        #ffdbf0 9px
+      );
+    border: 1px solid #ffb3dd;
+  }
+
+  /* BOROLINE Bottle */
+  .bottle.boroline {
+    background: 
+      linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.3) 0%,
+        rgba(255, 255, 255, 0.1) 30%,
+        transparent 60%,
+        rgba(34, 139, 34, 0.1) 80%,
+        rgba(34, 139, 34, 0.15) 100%
+      ),
+      repeating-linear-gradient(90deg,
+        #d4f1d4 0px,
+        #b8e6b8 2px,
+        #9ed99e 4px,
+        #b8e6b8 6px
+      );
+    border: 1px solid #7cb87c;
+    position: relative;
+  }
+
+  /* xD text beside Boroline */
+  .boroline-xd {
+    position: absolute;
+    top: -25px;
+    right: -35px;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--purple);
+    text-shadow: 2px 2px 4px rgba(199, 159, 255, 0.5);
+    animation: xdBounce 1.5s ease-in-out infinite;
+  }
+
+  @keyframes xdBounce {
+    0%, 100% { transform: rotate(-10deg) scale(1); }
+    50% { transform: rotate(10deg) scale(1.15); }
+  }
+
+  .bottle:before {
+    content: "";
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 28px;
+    border: 1px solid #bcd3fb;
+    border-radius: 8px 8px 3px 3px;
+  }
+
+  .bottle.height:before {
+    background: linear-gradient(180deg, #c4dbff, #a9ccff);
+  }
+
+  .bottle.love:before {
+    background: linear-gradient(180deg, #ffdbf0, #ffc9e6);
+  }
+
+  .bottle.boroline:before {
+    background: linear-gradient(180deg, #b8e6b8, #9ed99e);
+    border-color: #7cb87c;
+  }
+
+  /* Better Positioned Labels */
+  .label {
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    top: 52px;
+    height: 68px;
+    border-radius: 12px;
+    background: linear-gradient(180deg, #ffffff, #eef5ff);
+    border: 1px solid #d7e6ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 13.5px;
+    color: #2d4a66;
+    padding: 10px 8px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.3px;
+  }
+
+  .label em {
+    font-style: normal;
+    color: #1a5bb8;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 3px;
+  }
+
+  /* BOROLINE specific label */
+  .label.boroline-label {
+    background: linear-gradient(180deg, #ffffff, #f0fff0);
+    border-color: #c8e6c8;
+  }
+
+  .label.boroline-label em {
+    color: #2d5a27;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+  .confetti {
+    position: absolute;
+    inset: 0;
+    overflow: visible;
+    pointer-events: none;
+  }
+
+  .piece {
+    position: absolute;
+    width: 8px;
+    height: 12px;
+    border-radius: 2px;
+    opacity: .95;
+    will-change: transform;
+  }
+
+  /* Contract Section */
+  .contract {
+    margin-top: 20px;
+  }
+
+  .contract-step {
+    display: none;
+  }
+
+  .contract-step.active {
+    display: block;
+  }
+
+  .step-counter {
+    font-size: 14px;
+    color: var(--blue);
+    margin-bottom: 10px;
+  }
+
+  /* Final Message */
+  .finalMsg {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text);
+    text-align: center;
+    padding: 20px 10px;
+  }
+
+  .finalMsg .highlight {
+    color: var(--pink);
+    font-weight: 600;
+  }
+
+  .finalMsg .playful {
+    font-size: 0.95rem;
+    opacity: 0.8;
+    font-style: italic;
+  }
+
+  #noMsg {
+    min-height: 20px;
+  }
+
+  /* Mobile Optimizations */
+  @media (max-width: 600px) {
+    h1 { font-size: 1.8rem; }
+    .reasons-grid { grid-template-columns: 1fr; }
+    .giftBox { width: 300px; height: 220px; }
+    .bottle { width: 75px; height: 130px; }
+    .dancers { gap: 25px; }
+    .panda, .monkey { transform: scale(0.85); }
+    .birthday-queen { font-size: 1.3rem; }
+  }
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <h1>Happy Birthday, Dnyanda 🐼</h1>
+    <div class="sub">A silver & sky-blue surprise from your Monkey 🐒</div>
+  </header>
+
+  <!-- Screen 1: Welcome -->
+  <section class="screen active" id="s1">
+    <div class="card center">
+      <h2>Welcome, Madamji 🐼</h2>
+      <p>Ready for the cake cutting ceremony?</p>
+      <div>
+        <button class="cta" id="yesBtn">Yes, let's go 🎂</button>
+        <button class="cta ghost" id="noBtn">No 😗</button>
+      </div>
+      <div id="noMsg" style="margin-top:12px;display:none"></div>
+    </div>
+  </section>
+
+  <!-- Screen 2: Enhanced Cake Ceremony -->
+  <section class="screen" id="s2">
+    <div class="card">
+      <h2 class="center">🎂 Cake Ceremony Time! 🎉</h2>
+      
+      <div class="room" id="room">
+        <!-- Curtains -->
+        <div class="curtains" id="curtains">
+          <div class="curtain left"></div>
+          <div class="curtain right"></div>
+        </div>
+
+        <!-- Decorations -->
+        <div class="decorations" id="decorations">
+          <div class="banner">🎉 Happy Birthday! 🎉</div>
+          <div class="balloons">
+            <div class="balloon">🎈</div>
+            <div class="balloon">🎈</div>
+            <div class="balloon">🎈</div>
+            <div class="balloon">🎈</div>
+            <div class="balloon">🎈</div>
+          </div>
+        </div>
+
+        <!-- Lights System -->
+        <div class="lights" id="lights">
+          <div class="halogen h1"></div>
+          <div class="halogen h2"></div>
+          <div class="halogen h3"></div>
+          <div class="halogen h4"></div>
+          <div class="disco-light d1"></div>
+          <div class="disco-light d2"></div>
+          <div class="disco-light d3"></div>
+        </div>
+
+        <!-- Budget Message -->
+        <div class="budget-msg" id="budgetMsg">
+          <div class="emoji">😅💸</div>
+          <p><strong>Oops... Lights are gone!</strong></p>
+          <p>I'm on low budget - your monkey is broke! 🐒💔</p>
+          <div class="emoji">💡</div>
+        </div>
+
+        <!-- Table -->
+        <div class="table" id="table"></div>
+
+        <!-- Multi-Layer Cake -->
+        <div class="cake-container" id="cakeContainer">
+          <div class="plate">
+            <div class="cake" id="cake">
+              <div class="layer-bottom"></div>
+              <div class="layer-middle"></div>
+              <div class="layer-top">
+                <div class="cherries">
+                  <div class="cherry"></div>
+                  <div class="cherry"></div>
+                  <div class="cherry"></div>
+                  <div class="cherry"></div>
+                  <div class="cherry"></div>
+                </div>
+                <div class="candles" id="candles"></div>
+              </div>
+              <div class="slice" id="slice">
+                <div class="slice-part s-bottom"></div>
+                <div class="slice-part s-middle"></div>
+                <div class="slice-part s-top"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Birthday Queen Text -->
+        <div class="birthday-queen" id="birthdayQueen">🎊 Birthday Queen! 🎊</div>
+      </div>
+
+      <!-- Button Sequence -->
+      <div class="button-sequence">
+        <div class="sequence-step active" id="step1">
+          <button class="cta gold" id="addDecoBtn">Add Decorations 🎊</button>
+        </div>
+        
+        <div class="sequence-step" id="step2">
+          <button class="cta lime" id="lightsOnBtn">Turn On Lights 💡</button>
+        </div>
+        
+        <div class="sequence-step" id="step3">
+          <button class="cta teal" id="bringCakeBtn">Bring The Cake! 🎂</button>
+        </div>
+        
+        <div class="sequence-step" id="step4">
+          <p>Tap any candle to blow them ALL out! 🕯️</p>
+          <button class="cta ghost" id="blowCandlesBtn">Blow Candles 💨</button>
+        </div>
+        
+        <div class="sequence-step" id="step5">
+          <button class="cta" id="cutCakeBtn">Cut The Cake! ✂️</button>
+        </div>
+        
+        <div class="sequence-step" id="step6">
+          <button class="cta" id="toGame">Next ➜ Mini Game 🎮</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screen 3: Mini Game - Catch Hearts -->
+  <section class="screen" id="s3">
+    <div class="card">
+      <h2 class="center">🎮 Catch the Falling Hearts!</h2>
+      <div class="game-instructions">
+        Move the panda (click/tap or arrow keys) to catch 10 hearts! No rush, take your time! 💝
+      </div>
+      
+      <div class="mini-game">
+        <div class="game-canvas" id="gameCanvas">
+          <div class="score-display" id="scoreDisplay">0 / 10 💕</div>
+          <div class="panda-catcher" id="pandaCatcher">
+            <div class="panda">
+              <div class="panda-head">
+                <div class="panda-ear left"></div>
+                <div class="panda-ear right"></div>
+                <div class="panda-eye left"></div>
+                <div class="panda-eye right"></div>
+                <div class="panda-nose"></div>
+              </div>
+              <div class="panda-body">
+                <div class="panda-arm left"></div>
+                <div class="panda-arm right"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="game-complete" id="gameComplete">
+          🎉 Amazing! You caught all the hearts! 💝<br>
+          <small style="font-size: 1rem; margin-top: 10px; display: block;">Just like you caught mine! 🐒❤️</small>
+        </div>
+      </div>
+      
+      <div class="center" style="margin-top:15px; display:none" id="gameContinue">
+        <button class="cta" id="toDance">Next ➜ Dance Floor 🕺</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screen 4: Dance Floor with CSS Characters -->
+  <section class="screen" id="s4">
+    <div class="card dance">
+      <div class="discoBall"></div>
+      <div class="light-beams">
+        <div class="beam"></div>
+        <div class="beam"></div>
+        <div class="beam"></div>
+      </div>
+      <div class="dancers">
+        <div class="dancer-wrapper monkey-dance">
+          <div class="monkey">
+            <div class="monkey-head">
+              <div class="monkey-ear left"></div>
+              <div class="monkey-ear right"></div>
+              <div class="monkey-face">
+                <div class="monkey-eye left"></div>
+                <div class="monkey-eye right"></div>
+                <div class="monkey-nose"></div>
+                <div class="monkey-mouth"></div>
+              </div>
+            </div>
+            <div class="monkey-body">
+              <div class="monkey-arm left"></div>
+              <div class="monkey-arm right"></div>
+            </div>
+          </div>
+        </div>
+        
+        <span class="heart">💙</span>
+        
+        <div class="dancer-wrapper panda-dance">
+          <div class="panda">
+            <div class="panda-head">
+              <div class="panda-ear left"></div>
+              <div class="panda-ear right"></div>
+              <div class="panda-eye left"></div>
+              <div class="panda-eye right"></div>
+              <div class="panda-nose"></div>
+            </div>
+            <div class="panda-body">
+              <div class="panda-arm left"></div>
+              <div class="panda-arm right"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="center" style="margin-top:12px">
+      <button class="cta" id="toReasons">Next ➜ Reasons I Adore You</button>
+    </div>
+  </section>
+
+  <!-- Screen 5: Enhanced Reasons -->
+  <section class="screen" id="s5">
+    <div class="card">
+      <h2>Reasons I adore you ✨</h2>
+      <div class="reasons-grid" id="reasons"></div>
+      <div class="center" style="margin-top:20px">
+        <button class="cta" id="toGift">Next ➜ A Tiny Present 🎁</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screen 6: Gift with BOROLINE -->
+  <section class="screen" id="s6">
+    <div class="card center">
+      <h2>A little present 🎁</h2>
+      <p>Tap the gift to open. Three special bottles inside 😉</p>
+
+      <div class="giftWrap" style="margin-top:20px">
+        <div class="giftBox" id="gift">
+          <div class="lid"></div>
+          <div class="box">
+            <div class="ribbon"></div>
+          </div>
+          <div class="inside">
+            <div class="bottle height">
+              <div class="label"><em>Height Booster</em><br/>2 sips daily<br/>💪📏</div>
+            </div>
+            <div class="bottle love">
+              <div class="label"><em>Love Booster</em><br/>∞ sips allowed<br/>💕✨</div>
+            </div>
+            <div class="bottle boroline">
+              <div class="label boroline-label"><em>BOROLINE</em><br/>Apply before<br/>thinking of me</div>
+              <div class="boroline-xd">xD</div>
+            </div>
+          </div>
+          <div class="confetti" id="confetti"></div>
+        </div>
+      </div>
+
+      <div class="center" style="margin-top:20px">
+        <button class="cta" id="toFinal">Next ➜ Final Page</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screen 7: Final Message -->
+  <section class="screen" id="s7">
+    <div class="card">
+      <div class="finalMsg" id="finalMsg"></div>
+      
+      <div class="card contract">
+        <div class="contract-step active" id="contractStep1">
+          <h3>📜 Clause 1 of 3</h3>
+          <p>Do you agree to keep me forever? 🐒❤️</p>
+          <button class="cta" onclick="nextContractStep(1)">Hell Yes! 🙌</button>
+        </div>
+        
+        <div class="contract-step" id="contractStep2">
+          <h3>📜 Clause 2 of 3</h3>
+          <p>Promise to laugh at my terrible jokes? 😂</p>
+          <div class="step-counter">1/3 completed ✅</div>
+          <button class="cta" onclick="nextContractStep(2)">Obviously! 🤣</button>
+        </div>
+        
+        <div class="contract-step" id="contractStep3">
+          <h3>📜 Final Clause</h3>
+          <p>Seal it with a virtual hug? 🤗</p>
+          <div class="step-counter">2/3 completed ✅</div>
+          <button class="cta" onclick="completeContract()">*Hugs* 🫂</button>
+        </div>
+        
+        <div class="contract-step" id="contractComplete">
+          <h3>🎉 Contract Signed! 🎉</h3>
+          <p>Congratulations! You've won a lifetime supply of me! ❤️✨</p>
+          <button class="cta" onclick="showFinalMessage()">Continue 🎊</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Music Player -->
+<div class="music-player" id="musicPlayer" style="display:none">
+  <div class="music-icon">🎵</div>
+  <div class="music-text" id="musicText">Click to Play</div>
+</div>
+<audio id="bgMusic" loop>
+  <source src="perfect.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  // Router
+  const screens = ['s1','s2','s3','s4','s5','s6','s7'].map(id=>document.getElementById(id));
+  function go(i) { 
+    screens.forEach((s,idx)=>s.classList.toggle('active', idx===i)); 
+    window.scrollTo({top:0,behavior:'instant'}); 
+  }
+
+  // Screen 1: Welcome
+  const yesBtn = document.getElementById('yesBtn');
+  const noBtn = document.getElementById('noBtn');
+  const noMsg = document.getElementById('noMsg');
+  
+  yesBtn.addEventListener('click', ()=>go(1));
+  noBtn.addEventListener('click', ()=>{
+    noMsg.style.display = 'block';
+    noMsg.textContent = "Okay, I'll listen… but only for 2 seconds 😌";
+    setTimeout(()=>{ noMsg.textContent = "Time's up. Come on, birthday girl! 💙"; }, 1800);
+    setTimeout(()=>go(1), 3200);
+  });
+
+  // Screen 2: Enhanced Cake Ceremony
+  let currentStep = 1;
+  const maxSteps = 6;
+  
+  const room = document.getElementById('room');
+  const curtains = document.getElementById('curtains');
+  const decorations = document.getElementById('decorations');
+  const lights = document.getElementById('lights');
+  const table = document.getElementById('table');
+  const cakeContainer = document.getElementById('cakeContainer');
+  const cake = document.getElementById('cake');
+  const candles = document.getElementById('candles');
+  const slice = document.getElementById('slice');
+  const birthdayQueen = document.getElementById('birthdayQueen');
+  const budgetMsg = document.getElementById('budgetMsg');
+
+  const addDecoBtn = document.getElementById('addDecoBtn');
+  const lightsOnBtn = document.getElementById('lightsOnBtn');
+  const bringCakeBtn = document.getElementById('bringCakeBtn');
+  const blowCandlesBtn = document.getElementById('blowCandlesBtn');
+  const cutCakeBtn = document.getElementById('cutCakeBtn');
+  const toGameBtn = document.getElementById('toGame');
+
+  function showStep(step) {
+    for(let i = 1; i <= maxSteps; i++) {
+      const stepEl = document.getElementById(`step${i}`);
+      if(stepEl) stepEl.classList.remove('active');
+    }
+    const currentStepEl = document.getElementById(`step${step}`);
+    if(currentStepEl) currentStepEl.classList.add('active');
+  }
+
+  // Step 1: Add Decorations
+  addDecoBtn.addEventListener('click', () => {
+    decorations.classList.add('visible');
+    setTimeout(() => {
+      room.classList.add('dark');
+      budgetMsg.classList.add('visible');
+    }, 1000);
+    
+    setTimeout(() => {
+      showStep(2);
+    }, 1500);
+  });
+
+  // Step 2: Turn on lights with curtain reveal
+  lightsOnBtn.addEventListener('click', () => {
+    curtains.classList.add('open');
+    setTimeout(() => {
+      room.classList.remove('dark');
+      lights.classList.add('on');
+      budgetMsg.classList.remove('visible');
+    }, 800);
+    
+    setTimeout(() => {
+      showStep(3);
+    }, 1800);
+  });
+
+  // Step 3: Bring the cake
+  bringCakeBtn.addEventListener('click', () => {
+    table.classList.add('visible');
+    setTimeout(() => {
+      cakeContainer.classList.add('arriving', 'visible');
+      buildCandles();
+      setTimeout(() => {
+        showStep(4);
+      }, 2500);
+    }, 500);
+  });
+
+  function buildCandles(n=5) {
+    candles.innerHTML = '';
+    for(let i=0; i<n; i++) {
+      const c = document.createElement('div'); 
+      c.className = 'candle';
+      const f = document.createElement('div'); 
+      f.className = 'flame'; 
+      c.appendChild(f);
+      candles.appendChild(c);
+    }
+  }
+
+  // Step 4: Blow all candles
+  blowCandlesBtn.addEventListener('click', () => {
+    blowAllCandles();
+  });
+
+  candles.addEventListener('click', (e) => {
+    if(e.target.closest('.candle')) {
+      blowAllCandles();
+    }
+  });
+
+  function blowAllCandles() {
+    candles.classList.add('blow-all');
+    setTimeout(() => {
+      const allCandles = candles.querySelectorAll('.candle');
+      allCandles.forEach(c => c.classList.add('out'));
+      showStep(5);
+    }, 1000);
+  }
+
+  // Step 5: Cut the cake
+  cutCakeBtn.addEventListener('click', () => {
+    slice.style.opacity = '1';
+    slice.classList.add('anim');
+    
+    setTimeout(() => {
+      cake.classList.add('slice-missing');
+    }, 600);
+    
+    setTimeout(() => {
+      birthdayQueen.classList.add('visible');
+    }, 1200);
+    
+    setTimeout(() => {
+      showStep(6);
+    }, 2000);
+  });
+
+  // Step 6: Go to mini-game
+  toGameBtn.addEventListener('click', () => go(2));
+
+  // Screen 3: Mini Game - Catch the Falling Hearts (10 hearts, NO TIME LIMIT)
+  let gameScore = 0;
+  const targetScore = 10;
+  let gameActive = false;
+  let pandaPos = 50; // percentage
+
+  const gameCanvas = document.getElementById('gameCanvas');
+  const scoreDisplay = document.getElementById('scoreDisplay');
+  const pandaCatcher = document.getElementById('pandaCatcher');
+  const gameComplete = document.getElementById('gameComplete');
+  const gameContinue = document.getElementById('gameContinue');
+
+  function startGame() {
+    gameScore = 0;
+    gameActive = true;
+    updateScore();
+    spawnHeart();
+  }
+
+  function updateScore() {
+    scoreDisplay.textContent = `${gameScore} / ${targetScore} 💕`;
+    if(gameScore >= targetScore) {
+      endGame();
+    }
+  }
+
+  function spawnHeart() {
+    if(!gameActive) return;
+    
+    const heart = document.createElement('div');
+    heart.className = 'game-heart';
+    const hearts = ['💖', '💕', '💗', '💝', '❤️', '💙', '💜'];
+    heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+    
+    const leftPos = 5 + Math.random() * 85;
+    heart.style.left = leftPos + '%';
+    heart.style.animationDuration = (4 + Math.random() * 3) + 's';
+    
+    gameCanvas.appendChild(heart);
+    
+    heart.addEventListener('click', () => catchHeart(heart));
+    
+    heart.addEventListener('animationend', () => {
+      if(heart.parentNode) heart.remove();
+    });
+    
+    setTimeout(() => spawnHeart(), 800 + Math.random() * 1200);
+  }
+
+  function catchHeart(heart) {
+    if(!gameActive) return;
+    
+    gameScore++;
+    updateScore();
+    heart.style.animation = 'none';
+    heart.style.transform = 'scale(1.5)';
+    heart.style.opacity = '0';
+    setTimeout(() => heart.remove(), 300);
+  }
+
+  function endGame() {
+    gameActive = false;
+    gameComplete.classList.add('show');
+    setTimeout(() => {
+      gameContinue.style.display = 'block';
+    }, 2000);
+  }
+
+  // Panda movement
+  gameCanvas.addEventListener('click', (e) => {
+    if(!gameActive) return;
+    const rect = gameCanvas.getBoundingClientRect();
+    const clickX = e.clientX - rect.left;
+    pandaPos = (clickX / rect.width) * 100;
+    pandaPos = Math.max(5, Math.min(95, pandaPos));
+    pandaCatcher.style.left = pandaPos + '%';
+  });
+
+  // Keyboard controls
+  document.addEventListener('keydown', (e) => {
+    if(!gameActive) return;
+    if(e.key === 'ArrowLeft') {
+      pandaPos = Math.max(5, pandaPos - 5);
+      pandaCatcher.style.left = pandaPos + '%';
+    } else if(e.key === 'ArrowRight') {
+      pandaPos = Math.min(95, pandaPos + 5);
+      pandaCatcher.style.left = pandaPos + '%';
+    }
+  });
+
+  // Start game when screen loads
+  const observer = new MutationObserver(() => {
+    if(screens[2].classList.contains('active') && !gameActive && gameScore === 0) {
+      setTimeout(startGame, 500);
+    }
+  });
+  observer.observe(screens[2], { attributes: true });
+
+  document.getElementById('toDance').addEventListener('click', () => {
+    go(3);
+    // Start music when dance floor appears
+    const music = document.getElementById('bgMusic');
+    const musicPlayer = document.getElementById('musicPlayer');
+    musicPlayer.style.display = 'flex';
+    music.play().catch(e => {
+      console.log('Music autoplay blocked. User must click to play.');
+    });
+  });
+
+  // Screen 4: Dance -> Reasons
+  document.getElementById('toReasons').addEventListener('click', ()=>go(4));
+
+  // Screen 5: Enhanced Reasons (Silly + More)
+  const reasonsData = [
+    // Silly teen reasons (2 & 3, not 1 & 4)
+    "How you get super excited about literally nothing and it's adorable 🤩",
+    "When you try to act all serious but end up giggling anyway 😆",
+    
+    // Maths reason
+    "I hope you'll love maths this year... because you + me = perfect equation 🧮💕",
+    
+    // Original reasons
+    "I like your beautiful hair that shines in the sunlight ✨",
+    "I like your sparkling eyes that make my heart skip 👁️💫", 
+    "I like your sweet voice that sounds like music 🎵",
+    "I like your cute behavior that makes me smile 😊",
+    "I like the way you talk to me with so much warmth 💬❤️",
+    
+    // Additional genuine reasons
+    "The way you light up when talking about things you love 🌟",
+    "How caring you are with everyone around you 🤗",
+    "Your laugh that's more contagious than any meme 😂",
+    "The little things you remember that I forgot 🧠💭",
+    "How you make ordinary moments feel special ✨",
+    "Your determination when you set your mind to something 💪",
+    "The way you understand me without words 🤝",
+    "Your kindness that makes the world a better place 🌍💚",
+    "How you stay positive even on tough days ☀️",
+    "The unique way you see the world 🎨",
+    "Your smile that's worth more than anything 😊💎",
+    "Simply because you're YOU, and that's perfect 🐼❤️🐒"
+  ];
+
+  const reasonsWrap = document.getElementById('reasons');
+  reasonsData.forEach(t=>{ 
+    const div = document.createElement('div'); 
+    div.className = 'reason'; 
+    div.textContent = t; 
+    reasonsWrap.appendChild(div); 
+  });
+
+  document.getElementById('toGift').addEventListener('click', ()=>go(5));
+
+  // Screen 6: Gift with BOROLINE
+  const gift = document.getElementById('gift');
+  const confetti = document.getElementById('confetti');
+  gift.addEventListener('click', ()=>{
+    if(!gift.classList.contains('open')) {
+      gift.classList.add('open');
+      burstConfetti(gift);
+    }
+  });
+
+  document.getElementById('toFinal').addEventListener('click', ()=>go(6));
+
+  function burstConfetti(anchor) {
+    const rect = anchor.getBoundingClientRect();
+    const colors = ['#a9ccff','#e3eeff','#bcd3fb','#7db8ff','#dfe9f6','#c6dcff','#ff9dd1','#ffd166','#c79fff','#6ae2d3'];
+    const count = window.innerWidth < 768 ? 80 : 100;
+    for(let i=0; i<count; i++) {
+      const p = document.createElement('div'); 
+      p.className = 'piece';
+      p.style.background = colors[Math.floor(Math.random()*colors.length)];
+      p.style.left = (rect.width/2 + (Math.random()*40-20)) + 'px'; 
+      p.style.top = '15px';
+      p.style.width = (6+Math.random()*6) + 'px'; 
+      p.style.height = (8+Math.random()*10) + 'px';
+      confetti.appendChild(p);
+      
+      const dx = (Math.random()*2-1)*150;
+      const dy = 280+Math.random()*200;
+      const rot = (Math.random()*2-1)*820;
+      const dur = 1300+Math.random()*1000;
+      const t0 = performance.now();
+      
+      (function stepper(start, el) {
+        function step(t) {
+          const k = Math.min(1,(t-start)/dur);
+          const ease = 1-Math.pow(1-k,3);
+          const sway = Math.sin(k*10 + i)*14;
+          el.style.transform = `translate(${dx*ease + sway}px, ${dy*ease}px) rotate(${rot*ease}deg)`;
+          el.style.opacity = 1-k;
+          if(k<1) requestAnimationFrame(step); 
+          else el.remove();
+        } 
+        requestAnimationFrame(step);
+      })(t0, p);
+    }
+  }
+
+  // Screen 7: Contract & Final Message
+  let contractStep = 1;
+  
+  function nextContractStep(step) {
+    document.getElementById(`contractStep${step}`).classList.remove('active');
+    document.getElementById(`contractStep${step+1}`).classList.add('active');
+    contractStep++;
+  }
+  
+  function completeContract() {
+    document.getElementById('contractStep3').classList.remove('active');
+    document.getElementById('contractComplete').classList.add('active');
+  }
+  
+  function showFinalMessage() {
+    document.getElementById('contractComplete').classList.remove('active');
+    document.getElementById('finalMsg').innerHTML = `
+      <p>I really, <span class="highlight">really</span> hope this brought the biggest smile to your face 😊✨</p>
+      <p>And maybe... just maybe... a little blush too? <span class="playful">(please say yes, my ego depends on it) 😳</span></p>
+      <br>
+      <p>Look, I'll be honest - this isn't perfect. I'm still learning all this coding stuff <span class="playful">(with a little AI help because I'm not that smart yet 🤖)</span></p>
+      <p>But I put my <span class="highlight">entire heart</span> into every pixel, every animation, every silly joke. 💖</p>
+      <br>
+      <p>Next year's version is going to be <em>amazing</em> - I promise! <span class="playful">(maybe I'll actually know what I'm doing by then) 🚀</span></p>
+      <br>
+      <p>Now go out there and have the most <span class="highlight">incredible</span> birthday ever! 🎉</p>
+      <p>Eat cake until you can't move, dance like nobody's watching, and maybe... just maybe... think of your favorite monkey once or twice? 🐒💭</p>
+      <br>
+      <p><span class="playful">P.S. - If anyone asks who made this, just say "some guy who's absolutely crazy about me" 😌💕</span></p>
+      <br>
+      <p>Forever and always yours,<br><span class="highlight">Your favorite monkey</span> (I hope so anyway) 🐒❤️<br><em>- Nitesh</em> 🫶</p>
+    `;
+  }
+
+  // Music player toggle
+  const musicPlayer = document.getElementById('musicPlayer');
+  const bgMusic = document.getElementById('bgMusic');
+  const musicText = document.getElementById('musicText');
+  let musicPlaying = false;
+
+  musicPlayer.addEventListener('click', () => {
+    if(musicPlaying) {
+      bgMusic.pause();
+      musicText.textContent = 'Click to Play';
+      musicPlaying = false;
+    } else {
+      bgMusic.play();
+      musicText.textContent = 'Playing: Perfect';
+      musicPlaying = true;
+    }
+  });
+
+  // Start at welcome
+  window.addEventListener('load', ()=>go(0));
+</script>
+</body>
+</html>
